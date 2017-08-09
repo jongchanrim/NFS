@@ -1,0 +1,53 @@
+syntax = "proto3";
+package nfs; 
+ 
+message CData {
+	 int64 call = 1;
+	 string path = 2;
+	 int64 mask = 3;
+	 int64 size = 4;
+	 int64 offset = 5;
+	 int64 mode = 6;
+	 int64 rdev = 7;
+	 int64 uid = 8;
+	 int64 gid = 9;
+	 int64 flags =10;
+	 string frompath =11;
+	 string topath =12;
+	 int64 res = 13;
+	 string buf = 14;
+  }
+
+message Stat{
+	 int64 dev  = 1;
+    	 int64 ino  = 2;    
+    	 int64 mode = 3;    
+    	 int64 nlink= 4;   
+    	 int64 uid  = 5;   
+    	 int64 gid  = 6;     
+    	 int64 rdev = 7;    
+    	 int64 size = 8;    
+    	 int64 blksize = 9; 
+    	 int64 blocks = 10;  
+    	 int64 mtime  = 11;
+    	 int64 ctime  = 12;
+    	 int64 atime  = 13;
+	 int64 res = 14;
+}
+
+ message Filelist
+    {
+    	repeated string filename = 1;
+	 int64 res = 14;
+    }
+
+message Buffer{
+	 string buf =1;
+	 int64 res = 14;
+}
+
+message Result{
+	 int64 res = 1;
+}
+
+
